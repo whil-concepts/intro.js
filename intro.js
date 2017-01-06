@@ -1058,8 +1058,10 @@
       prevTooltipButton.tabIndex = '-1';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     } else if (this._introItems.length - 1 == this._currentStep || this._introItems.length == 1) {
-      skipTooltipButton.innerHTML = this._options.doneLabel;
-      skipTooltipButton.className = 'introjs-button introjs-donebutton';
+      if (skipTooltipButton) {
+        skipTooltipButton.innerHTML = this._options.doneLabel;
+        skipTooltipButton.className = 'introjs-button introjs-donebutton';
+      }
       prevTooltipButton.className = 'introjs-button introjs-prevbutton';
 
       if (this._options.hideNext == true) {
