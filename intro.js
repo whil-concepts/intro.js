@@ -889,7 +889,9 @@
         //reset button focus
         if (nextTooltipButton.tabIndex === -1) {
           //tabindex of -1 means we are at the end of the tour - focus on skip / done
-          skipTooltipButton.focus();
+          if (skipTooltipButton) {
+            skipTooltipButton.focus();
+          }
         } else {
           //still in the tour, focus on next
           nextTooltipButton.focus();
