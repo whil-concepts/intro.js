@@ -1073,7 +1073,9 @@
     } else {
       prevTooltipButton.className = 'introjs-button introjs-prevbutton';
       nextTooltipButton.className = 'introjs-button introjs-nextbutton';
-      skipTooltipButton.innerHTML = this._options.skipLabel;
+      if (skipTooltipButton) {
+        skipTooltipButton.innerHTML = this._options.skipLabel;
+      }
     }
 
     //Set focus on "next" button, so that hitting Enter always moves you onto the next step
